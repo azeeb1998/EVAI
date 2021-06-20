@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <style>
+		  .heading{
+        position: relative;
+        background: black
+        font-family: 'Times New Roman', Times, serif;
+        -webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		}
+		
+	  </style>
+
+    <title>About the Software</title>
+    <link rel="stylesheet" href="DataEditing.css">
+  </head>
+
+
+
+
+  <body style="font-family: Times New Roman;" style="color: rgb(0, 0, 0);">
+	
+		<div class="Mainpage">
+		<div><a style="text-decoration: none;" href="Frontpage.html"><button class="backbutton">Back</button></a></div>
+		<img src="../images/App Logo - Copy.png" width="180px" height="116.94px" style="position: absolute;vertical-align: middle;margin-left: 70px; margin-right: 20px;">
+				
+			<div>
+				
+				<p  style=" color: rgb(0, 0, 0);font-family: 'Times New Roman', Times, serif; font-size: 40px; letter-spacing: 0.15cm; text-align: center;">
+						About The Software
+				</p>
+
+				<p style="font-size: 20px; text-align: justify;line-height: 30px;letter-spacing: 0.5px; color: rgb(0, 0, 0);">
+					The Electric Vehicle Analyzation Interface, a.k.a EVAI is a software designed to assist the Dual Motor Test Rig. The Dual Motor Test Rig is an electric vehicle test rig having two BLDC motors and a common central loading system. The rig was designed to allow students to experiment and analyze the working of the dual motor system found in electric vehicles.
+					EVAI allows users to compare experimental data obtained from the Dual motor test rig with the actual data. There are 8 windows, each of them representing a curve that was obtained from the data collected from the test rig. The actual data is already available in the software which the users may use to compare with the data obtained by them from test rig.
+					You will be able to enter your data by editing the ‘Obtained data’ column.
+					To do so, the following steps are done:<br>
+					The window shows below is designed for the Efficiency vs Speed Characteristics.
+					<ol style=" color: rgb(0, 0, 0);align-items: center; text-align: justify; font-size: 20px;line-height: 40px;letter-spacing: 0.5px;">
+					<img src="../images/software1.png" width="700px" height="393.75px" style="vertical-align: middle;margin-left: 110px; margin-right: 20px;">
+					<li>Select the cell you wish to edit using your mouse pointer. The number present in the cell will then be displayed on the INPUT cell.</li>
+					<img src="../images/software2.jpg" width="700px" height="393.75px" style="vertical-align: middle;margin-left: 110px; margin-right: 20px;">
+					<li>Replace the data in the INPUT CELL with the obtained data.</li>
+					<li>Click ‘Edit’.</li>
+					<img src="../images/software3.jpg" width="700px" height="393.75px" style="vertical-align: middle;margin-left: 110px; margin-right: 20px;">
+					<li>Click ‘Generate Chart’.</li>
+					<img src="../images/software4.png" width="700px" height="393.75px" style="vertical-align: middle;margin-left: 110px; margin-right: 20px;">
+					</ol>
+				</p>
+					
+		    </div>
+				
+						
+		</div>
+
+	
+	<script>
+ var s = document.getElementById("btn")
+
+ function I(){
+	document.getElementById("I").style.visibility="visible";
+    document.getElementById("D").style.visibility="hidden";
+    document.getElementById("R").style.visibility="hidden";
+    s.style.left = "0px"
+ }
+
+ function D(){
+	document.getElementById("I").style.visibility="hidden";
+    document.getElementById("D").style.visibility="visible";
+    document.getElementById("R").style.visibility="hidden";
+    s.style.left = "200px"
+ }
+
+ function R(){
+	document.getElementById("I").style.visibility="hidden";
+    document.getElementById("D").style.visibility="hidden";
+    document.getElementById("R").style.visibility="visible";
+    s.style.left = "400px"
+ }
+	</script>
+
+
+	</body>
+</html>

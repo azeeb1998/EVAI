@@ -1,0 +1,229 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: auto;
+  
+  max-width: 100rem;
+  padding: 1rem;
+ background: linear-gradient(to right, #030e10, #034c3d, #019ed2, #ec8ff6, #a843c8, #dd3885, #d12701, #e22c09, #c72604, #4b0304 );
+ background-image: url("../images/Team.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-attachment: fixed;
+ position: relative;
+ 
+}
+
+
+
+
+
+
+
+/*ABOUT TAB EDITING*/
+
+
+
+.aboutline{
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 0px auto;
+    
+  }
+  
+  .aboutline .aboutbox{
+    width: calc(420px - 10px);
+    height: calc(150px - 10px);
+    background:  rgba(0, 0, 0, 0.384);
+    color: white;
+    float: left;
+    margin: 6.5px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px 2px rgba(255, 0, 119, 0.144);
+    overflow: hidden;
+    
+  }
+  
+  .aboutline .guidebox{
+    width: calc(300px - 10px);
+    height: calc(600px);
+    background:  rgba(0, 0, 0, 0.384);
+    color: white;
+    float: left;
+    margin: 6.5px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px 2px rgba(255, 0, 119, 0.144);
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  
+  .aboutline .aboutbox .abouticon{
+    position: relative;
+    width: 100px;
+    height: 180px;
+    color: rgb(0, 0, 0);
+    
+    display: flex;
+    
+    
+    border-radius: 5px;
+    font-size: 40px;
+    font-weight: 100;
+    transition: 1s;
+  }
+  
+  .aboutline .guidebox .guideicon{
+    position: relative;
+    width: 150px;
+    height: 180px;
+    color: rgb(0, 0, 0);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    border-radius: 20px;
+    font-size: 40px;
+    font-weight: 100;
+    transition: 0s;
+  }
+  
+  
+  
+  .aboutline .guidebox:nth-child(1) .guideicon{
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.384);
+   
+    height: 150px;
+    width: 125px;
+    transition: 1s;
+  }
+  .aboutline .guidebox:nth-child(1):hover .guideicon{
+    box-shadow: 0 0 0 500px rgb(0, 29, 61);
+    background:linear-gradient(125deg, #00000048,#4f7e73, #59b9df, #e5abf6, #d693e7, #de7cc2, #e06a52, #df0000);
+  }
+  
+  .aboutline .aboutbox:nth-child(2) .abouticon{
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.384);
+    
+    transition: 1s;
+  }
+  .aboutline .aboutbox:nth-child(2):hover .abouticon{
+    box-shadow: 0 0 0 500px rgb(0, 29, 61);
+    background:linear-gradient(125deg, #00000048,#4f7e73, #59b9df, #e5abf6, #d693e7, #de7cc2, #e06a52, #df0000);
+  }
+  .aboutline .aboutbox:nth-child(3) .abouticon{
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.384);
+    
+    transition: 1s;
+  }
+  .aboutline .aboutbox:nth-child(3):hover .abouticon{
+    box-shadow: 0 0 0 500px rgb(0, 29, 61);
+    background:linear-gradient(125deg, #00000048,#4f7e73, #59b9df, #e5abf6, #d693e7, #de7cc2, #e06a52, #df0000);
+  }
+  .aboutline .aboutbox:nth-child(4) .abouticon{
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.63);;
+    
+    transition: 1s;
+  }
+  .aboutline .aboutbox:nth-child(4):hover .abouticon{
+    box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.63);
+    background:linear-gradient(125deg, #00000048,#4f7e73, #59b9df, #e5abf6, #d693e7, #de7cc2, #e06a52, #df0000);
+  }
+  .aboutline .aboutbox:nth-child(5) .abouticon{
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.63);;
+    
+    transition: 1s;
+  }
+  .aboutline .aboutbox:nth-child(5):hover .abouticon{
+    box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.63);
+    background:linear-gradient(125deg, #00000048,#4f7e73, #59b9df, #e5abf6, #d693e7, #de7cc2, #e06a52, #df0000);
+  }
+  .aboutline .aboutbox:nth-child(6) .abouticon{
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.63);;
+   
+    transition: 1s;
+  }
+  .aboutline .aboutbox:nth-child(6):hover .abouticon{
+    box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.63);
+    background:linear-gradient(125deg, #00000048,#4f7e73, #59b9df, #e5abf6, #d693e7, #de7cc2, #e06a52, #df0000);
+  }
+  .aboutline .aboutbox:nth-child(7) .abouticon{
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.63);;
+   
+    transition: 1s;
+  }
+  .aboutline .aboutbox:nth-child(7):hover .abouticon{
+    box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.63);
+    background:linear-gradient(125deg, #00000048,#4f7e73, #59b9df, #e5abf6, #d693e7, #de7cc2, #e06a52, #df0000);
+  }
+  .aboutline .aboutbox:nth-child(8) .abouticon{
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.63);;
+    
+    transition: 1s;
+  }
+  .aboutline .aboutbox:nth-child(8):hover .abouticon{
+    box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.63);
+    background:linear-gradient(125deg, #00000048,#4f7e73, #59b9df, #e5abf6, #d693e7, #de7cc2, #e06a52, #df0000);
+  }
+  .aboutline .aboutbox:nth-child(9) .abouticon{
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.63);;
+   
+    transition: 1s;
+  }
+  .aboutline .aboutbox:nth-child(9):hover .abouticon{
+    box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.63);
+    background:linear-gradient(125deg, #00000048,#4f7e73, #59b9df, #e5abf6, #d693e7, #de7cc2, #e06a52, #df0000);
+  }
+  
+  
+  
+  
+  
+  
+  
+  .aboutline .guidebox .guidecontent{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  .aboutline .guidebox:hover .guidecontent{
+    color: white;
+  }
+  .aboutline .aboutbox .aboutcontent{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  .aboutline .aboutbox:hover .aboutcontent{
+    color: white;
+  }
+  
+
+
+
+
+  .backbutton {
+    position: absolute;
+      width:40px;
+      height: 40px;
+      font-size: 20px;
+      color: white;
+      border-radius: 40px;
+      box-shadow: 0 0 20px 9px  #ffffff13;
+      border: 0;
+      background: rgba(0, 0, 0, 0.342);
+      outline: none;
+      text-align: center;
+      transition: 0.5s;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .backbutton:hover {
+    background:black;
+    box-shadow: 0 0 20px 9px  #ffffff71;
+    color: white;
+  }

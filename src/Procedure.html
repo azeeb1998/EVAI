@@ -1,0 +1,189 @@
+<html lang="en">
+
+<head>
+  <title>Procedure</title>
+  <link rel="stylesheet" href="Procedure.css">
+  <style>
+    .heading{
+        position: relative;
+        background: linear-gradient(to left, rgb(54, 225, 255), #008cffc2);
+        font-family: 'Times New Roman', Times, serif;
+        margin-bottom: 0px;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+  </style>
+  <meta charset="utf-8" />
+  
+</head>
+
+<body>
+  <div class="page">
+  <!--
+  <p style="text-align: center; font-size: 20px; letter-spacing: 4px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+  <span class="heading" style="text-align: center; font-size: 40px; letter-spacing: 4px;">PROCEDURE</span><br>Electric Vehicle Analyzation Interface</p>
+  -->
+  <div><a style="text-decoration: none;" href="Frontpage.html"><button class="backbutton">Back</button></a></div>
+  <div class="button-box">
+    <div id="btn"></div>
+      <button style="font-family: cambria; text-align: center;" type="button" class="toggle-btm" onclick="I()">Introduction</button>
+      <button style="font-family: cambria; text-align: center;" type="button" class="toggle-btm" onclick="T()">Variable Load</button>
+      <button style="font-family: cambria; text-align: center;" type="button" class="toggle-btm" onclick="G()">Variable Speed</button>
+      <button style="font-family: cambria; text-align: center;" type="button" class="toggle-btm" onclick="D()">Coasting</button>
+  </div>
+
+<div id="Introduction" style="display: block;">
+  <p style="text-align: center; font-size: 25px; color: rgb(0, 57, 95); letter-spacing: 0.5px; line-height: 40px;">
+    <span class="heading" style="font-size: 30px;"><b>The Dual Motor Electric Vehicle Test Rig</b></span>
+  </p>
+  <img src="../images/FabricatedTestRig.jpeg" width="480px" height="350px" style="float:right ;vertical-align: middle;margin-left: 30px; margin-right: 20px;">
+  <p style="font-size: 20px; line-height: 45px; text-align: justify;">
+    A novel dual motor electric vehicle test rig with mechanical loading designed to carry out the performance analysis of the dual motor propulsion system was designed. 
+    The figure shows the overall arrangement of the test rig. It includes two BLDC motors connected in parallel to a common battery pack. 
+    The two motors are connected to a common mechanical loading system. 
+    The two motors and the common loading shaft were supported on a custom designed mild steel stand. 
+    Each motor is connected independently to a throttle. 
+    Using this arrangement, the power delivered to the two motors can be manipulated based on our convenience. 
+    They also have their own independent controllers. 
+    Such a system would allow us to analyze the working a dual motor electric vehicle more easily and also help us understand the key areas for improvement.
+  </p>
+  
+</div>
+
+<div id="Theory" style="display: none; line-height: 10px;">
+ 
+  <p style="text-align: center; font-size: 25px; color: rgb(0, 57, 95); letter-spacing: 0.5px; line-height: 40px;">
+    <span class="heading" style="font-size: 30px;"><b>Varible Load Test</b></span>
+  </p>
+  <img src="../images/RIG FINAL 5.png" width="420px" height="300px" style="float:right ;vertical-align: middle; margin-left: 30px; margin-right: 20px;">
+  <p style="font-size: 20px;text-align: left;">
+       <ol style="line-height: 30px; font-size: 20px; text-align: justify;">
+         <li>The surrounding ambient environment was analysed and the ambient temperature was noted. Initially, the battery voltage was determined using a multimeter and the reading was noted.</li>
+         <li>Initially the no load values of current, voltage and power were noted from the energy meters of both motors.</li>
+         <li>1 kg was added to the dynamometer and the throttle of Motor 1 was rotated until the pre-determined rated speed of the motor was attained. Once the rated speed was attained, the corresponding voltage, current and power readings were noted from the two energy meters.</li>
+         <li>Loads were added to the dynamometer in a increment of 1 kg and the throttle was adjusted to maintain the rated speed. The corresponding voltage and current readings were gathered from the energy meter.</li>
+         <li>The corresponding spring balance reading was noted for various speeds.</li>
+         <li>This process would continue until the first motor began to stall.</li>
+         <li>Now, the first motor would be held at full throttle while the throttle of the second motor would be adjusted to maintain the rated speed.</li>
+         <li>This process would continue until both the motors stall.</li>
+       </ol>
+       
+  </p>
+</div>
+
+
+<div id="Graph Generator" style="display: none;">
+  
+  <p style="text-align: center; font-size: 25px; color: rgb(0, 57, 95); letter-spacing: 0.5px; line-height: 40px;">
+    <span class="heading" style="font-size: 30px;"><b>Varible Speed Test</b></span>
+  </p>
+  <img src="../images/RIG FINAL 7.jpg" width="420px" height="300px" style="float:right ;vertical-align: middle; margin-left: 30px; margin-right: 20px;">
+  <p style="font-size: 20px;text-align: left;">
+       <ol style="line-height: 30px; font-size: 20px; text-align: justify;">
+         <li>The surrounding ambient environment was analysed and the ambient temperature was noted. Initially, the battery voltage was determined using a multimeter and the reading was noted.</li>
+         <li>The load at which maximum efficiency was obtained at the rated speed was identified. This load was applied on the test rig.</li>
+         <li>Keeping this load constant, The speed was varied with an increment of 50 rpm.</li>
+         <li>The corresponding voltage and current readings were gathered from the energy meter for various speeds.</li>
+         <li>The corresponding spring balance reading was noted for various speeds.</li>
+         <li>This process would continue until the motor is unable to increase its speed furthur. In this case the second motor would be used to increase the speed.</li>
+         <li>This process would continue until the maximum possible speed was attained.</li>
+         
+         
+       </ol>
+       
+  </p>
+
+  
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="Database" style="display: none;">
+
+  
+  <p style="text-align: center; font-size: 25px; color: rgb(0, 57, 95); letter-spacing: 0.5px; line-height: 40px;">
+    <span class="heading" style="font-size: 30px;"><b>Coasting Time</b></span>
+  </p>
+  <img src="../images/RIG FINAL 4.png" width="420px" height="300px" style="float:right ;vertical-align: middle;margin-left: 30px; margin-right: 20px;">
+  <p style="font-size: 20px;text-align: left;">
+       <ol style="line-height: 30px; font-size: 20px; text-align: justify;">
+         <li>The surrounding ambient environment was analysed and the ambient temperature was noted. Initially, the battery voltage was determined using a multimeter and the reading was noted.</li>
+         <li>Initially the no load values of current, voltage and power were noted from the energy meters of both motors.</li>
+         <li>1 kg was added to the dynamometer and the throttle of Motor 1 was rotated until the pre-determined rated speed of the motor was attained.</li>
+         <li>Once the rated speed was attained, the throttle was released and the time taken for the motor to reach 0 rpm from the rated rpm was noted.</li>
+         <li>Loads were added to the dynamometer in a increment of 1 kg and the throttle was adjusted to maintain the rated speed. the corresponding voltage and current readings were gathered from the energy meters.</li>
+         <li>This process would continue until the first motor began to stall.</li>
+         <li>Now, the first motor would be held at full throttle while the throttle of the second motor would be adjusted to maintain the rated speed.</li>
+         <li>This process would continue until both the motors stall.</li>
+       </ol>
+       
+  </p>
+  
+</div>
+
+
+
+
+
+
+</div>
+
+<script>
+  var s = document.getElementById("btn")
+
+  
+  function remove(){
+    document.getElementById("function").style.visibility="visible";
+
+  }
+
+
+  function I(){
+    document.getElementById("Introduction").style.display="block";
+    document.getElementById("Graph Generator").style.display="none";
+    document.getElementById("Theory").style.display="none";
+    document.getElementById("Database").style.display="none";
+    s.style.left = "0px"
+  }
+
+  function T(){
+    document.getElementById("Introduction").style.display="none";
+    document.getElementById("Graph Generator").style.display="none";
+    document.getElementById("Theory").style.display="block";
+    document.getElementById("Database").style.display="none";
+    s.style.left = "200px"
+  }
+
+  function G(){
+    document.getElementById("Introduction").style.display="none";
+    document.getElementById("Graph Generator").style.display="block";
+    document.getElementById("Theory").style.display="none";
+    document.getElementById("Database").style.display="none";
+    s.style.left = "400px"
+  }
+
+  
+
+  function D(){
+    document.getElementById("Introduction").style.display="none";
+    document.getElementById("Graph Generator").style.display="none";
+    document.getElementById("Theory").style.display="none";
+    document.getElementById("Database").style.display="block";
+    s.style.left = "600px"
+  }
+
+</script>
+</body>
+
+</html>

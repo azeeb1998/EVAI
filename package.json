@@ -1,0 +1,78 @@
+{
+  "name": "evai",
+  "productName": "EVAI v1.0.0",
+  "version": "1.0.0",
+  "description": "NSS COLLEGE OF ENGINEERING B.TECH MECHANICAL ENGINEERING PROJECT TEAM AZEEB and AMAL",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "repository": "https://github.com/azeeb1998/B.Tech_Project",
+  "homepage": "https://github.com/azeeb1998/B.Tech_Project",
+  "keywords": ["Azeeb","Amal", "Project"],
+  "author": "Azeeb and Amal",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "project_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-packager": "^15.1.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "function-plot": "^1.22.4"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^11.0.3",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "appId": "com.AzeebAmal.EVAI",
+    "win":{
+      "target": ["nsis"],
+      "icon": "build/Icon.ico"
+    },
+    "nsis":{
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/Icon.ico",
+      "uninstallerIcon": "build/Icon.ico",
+      "installerSidebar": "build/installerSidebar.bmp",
+      "uninstallerSidebar": "build/installerSidebar.bmp",
+      "license": "license.txt",
+      "runAfterFinish": true
+    }
+  }
+}

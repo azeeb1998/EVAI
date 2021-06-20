@@ -1,0 +1,606 @@
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: auto;
+    
+    max-width: 100rem;
+    padding: 1rem;
+    /*background: linear-gradient(to right, #030e10, #034c3d, #019ed2, #ec8ff6, #a843c8, #dd3885, #d12701, #e22c09, #c72604, #4b0304 );*/
+    background-image: url("../images/chuttersnap-xfaYAsMV1p8-unsplash.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   position: relative;
+   
+  }
+  
+  .Mainpage{
+    width: 1200px;
+    height:590px;
+    position: relative;
+    margin: 0.0001% auto;
+    background: rgba(0, 0, 0, 0.534);
+    padding: 5px;
+    border-radius: 30px;
+   
+  }
+  
+  /*SERVICE TAB EDITING*/
+  
+  .serviceimage{
+    border-radius: 60%;
+    width: 80px;
+    height: 80px;
+  }
+  .serviceline{
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    margin: 15px auto;
+    
+  }
+  
+  .serviceline .servicebox{
+    width: calc(330px - 10px);
+    height: calc(480px - 50px);
+    color: white;
+    background:  rgba(0, 0, 0, 0.582);
+    float: left;
+    margin: 6.5px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px 2px #00000013;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+  }
+
+  .serviceline .servicebox:hover{
+    box-shadow: 0 0 30px 10px  #ffffffb0;
+    transition: 0.5s;
+  }
+  
+  
+  .serviceline .servicebox .serviceicon{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: rgb(0, 0, 0);
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 100;
+    transition: 1s;
+  }
+  
+  
+  .serviceline .servicebox:nth-child(1) .serviceicon{
+    box-shadow: 0 0 0 0  rgba(255, 255, 255, 0.301);
+    background:rgba(107, 107, 107, 0.329);
+    transition: 1s;
+  }
+  .serviceline .servicebox:nth-child(1):hover .serviceicon{
+    box-shadow: 0 0 0 500px   rgba(116, 116, 116, 0.212)
+  }
+  .serviceline .servicebox:nth-child(2) .serviceicon{
+    box-shadow: 0 0 0 0 #008cff5e;
+    background:linear-gradient(to right,  #4ecdffa4, #11afd6b4, #0270cac0 );
+    transition: 1s;
+  }
+  .serviceline .servicebox:nth-child(2):hover .serviceicon{
+    box-shadow: 0 0 0 500px #006ac02c;
+  }
+  .serviceline .servicebox:nth-child(3) .serviceicon{
+    box-shadow: 0 0 0 0 rgba(226, 75, 48, 0.404);
+    background:linear-gradient(to right, #e22d0963, #c7240493, #e0070bb4  );
+    transition: 1s;
+  }
+  .serviceline .servicebox:nth-child(3):hover .serviceicon{
+    box-shadow: 0 0 0 500px rgba(226, 75, 48, 0.24);
+  }
+  
+  
+  
+  
+  
+  
+  .serviceline .servicebox .servicecontent{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  .serviceline .servicebox:hover .servicecontent{
+    color: white;
+  }
+  
+  
+  .serviceline .servicebox .servicebutton1{
+    padding: 10px 30px;
+    margin: 10px;
+    cursor: pointer;
+    background: rgba(107, 107, 107, 0.329);
+    color:black;
+    border:0;
+    outline: none;
+    position: relative;
+    text-align: center;
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  .serviceline .servicebox .servicebutton1:hover{
+   color: white;
+   
+  }
+  
+  .serviceline .servicebox .servicebutton2{
+    padding: 10px 30px;
+    margin: 10px;
+    cursor: pointer;
+    background: linear-gradient(to right,  #4ecdffa4, #11afd6b4, #008cffc0 );
+    color:black;
+    border:0;
+    outline: none;
+    position: relative;
+    text-align: center;
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  .serviceline .servicebox .servicebutton2:hover{
+   color: white;
+   
+  }
+  
+  .serviceline .servicebox .servicebutton3{
+    padding: 10px 30px;
+    margin: 10px;
+    cursor: pointer;
+    background: linear-gradient(to right, #e22d0963, #c7240493, #e0070bb4 );
+    color:black;
+    border:0;
+    outline: none;
+    position: relative;
+    text-align: center;
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  .serviceline .servicebox .servicebutton3:hover{
+   color: white;
+   
+  }
+  
+  /*SECOND SERVICE LINE */
+
+  .serviceline2{
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    margin: 15px auto;
+    
+  }
+  
+  .serviceline2 .servicebox{
+    width: calc(330px - 10px);
+    height: calc(480px - 50px);
+    color: white;
+    background:  rgba(0, 0, 0, 0.582);
+    float: left;
+    margin: 6.5px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px 2px #00000013;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+  }
+
+  .serviceline2 .servicebox:hover{
+    box-shadow: 0 0 30px 10px  #ffffffb0;
+    transition: 0.5s;
+  }
+  
+  
+  .serviceline2 .servicebox .serviceicon{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: rgb(0, 0, 0);
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 100;
+    transition: 1s;
+  }
+  
+  
+  .serviceline2 .servicebox:nth-child(1) .serviceicon{
+    box-shadow: 0 0 0 0  #fdbe1270;
+    background:linear-gradient(to right, #fec00496, #bb00009a);
+    transition: 1s;
+  }
+  .serviceline2 .servicebox:nth-child(1):hover .serviceicon{
+    box-shadow: 0 0 0 500px   #ffc1152c
+  }
+  .serviceline2 .servicebox:nth-child(2) .serviceicon{
+    box-shadow: 0 0 0 0 #b1bdc994;
+    background:linear-gradient(to right, #b1bdc9, #606e7c,#4a5058 );
+    transition: 1s;
+  }
+  .serviceline2 .servicebox:nth-child(2):hover .serviceicon{
+    box-shadow: 0 0 0 500px #606e7c57;
+  }
+  .serviceline2 .servicebox:nth-child(3) .serviceicon{
+    box-shadow: 0 0 0 0 rgb(10, 44, 0);
+    background:rgba(17, 71, 0, 0.788);
+    transition: 1s;
+  }
+  .serviceline2 .servicebox:nth-child(3):hover .serviceicon{
+    box-shadow: 0 0 0 500px rgba(10, 44, 0, 0.295);
+  }
+  
+  
+  
+  
+  
+  
+  .serviceline2 .servicebox .servicecontent{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  .serviceline2 .servicebox:hover .servicecontent{
+    color: white;
+  }
+  
+  
+  .serviceline2 .servicebox .servicebutton1{
+    padding: 10px 30px;
+    margin: 10px;
+    cursor: pointer;
+    background: linear-gradient(to right, #fec00496, #bb00009a);
+    color:black;
+    border:0;
+    outline: none;
+    position: relative;
+    text-align: center;
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  .serviceline2 .servicebox .servicebutton1:hover{
+   color: white;
+   
+  }
+  
+  .serviceline2 .servicebox .servicebutton2{
+    padding: 10px 30px;
+    margin: 10px;
+    cursor: pointer;
+    background: linear-gradient(to right, #b1bdc9, #606e7c,#4a5058 );
+    color:black;
+    border:0;
+    outline: none;
+    position: relative;
+    text-align: center;
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  .serviceline2 .servicebox .servicebutton2:hover{
+   color: white;
+   
+  }
+  
+  .serviceline2 .servicebox .servicebutton3{
+    padding: 10px 30px;
+    margin: 10px;
+    cursor: pointer;
+    background: rgba(17, 71, 0, 0.788);
+    color:black;
+    border:0;
+    outline: none;
+    position: relative;
+    text-align: center;
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  .serviceline2 .servicebox .servicebutton3:hover{
+   color: white;
+   
+  }
+  
+  
+/*THIRD SERVICE LINE */
+
+.serviceline3{
+  position: relative;
+  width: 1000px;
+  height: 300px;
+  margin: 15px auto;
+  
+}
+
+.serviceline3 .servicebox{
+  width: calc(330px - 10px);
+  height: calc(480px - 50px);
+  color: white;
+  background:  rgba(0, 0, 0, 0.582);
+  float: left;
+  margin: 6.5px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 0 25px 2px #00000013;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.serviceline3 .servicebox:hover{
+  box-shadow: 0 0 30px 10px  #ffffffb0;
+  transition: 0.5s;
+}
+
+
+.serviceline3 .servicebox .serviceicon{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  color: rgb(0, 0, 0);
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 100;
+  transition: 1s;
+}
+
+
+.serviceline3 .servicebox:nth-child(1) .serviceicon{
+  box-shadow: 0 0 0 0  #675f52c7;
+  background:linear-gradient(to right, #675f52a6, #7c56538a);
+  transition: 1s;
+}
+.serviceline3 .servicebox:nth-child(1):hover .serviceicon{
+  box-shadow: 0 0 0 500px   #675f5249;
+}
+.serviceline3 .servicebox:nth-child(2) .serviceicon{
+  box-shadow: 0 0 0 0 #a1205fd7;
+  background:linear-gradient(to right, #224758, #89024c);
+  transition: 1s;
+}
+.serviceline3 .servicebox:nth-child(2):hover .serviceicon{
+  box-shadow: 0 0 0 500px #a9336c41;
+}
+.serviceline3 .servicebox:nth-child(3) .serviceicon{
+  box-shadow: 0 0 0 0 #e30233b9;
+  background: linear-gradient(to right, #f200288e, #a4008b);
+  transition: 1s;
+}
+.serviceline3 .servicebox:nth-child(3):hover .serviceicon{
+  box-shadow: 0 0 0 500px #e3023333;
+}
+
+
+
+
+
+
+.serviceline3 .servicebox .servicecontent{
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+}
+.serviceline3 .servicebox:hover .servicecontent{
+  color: white;
+}
+
+
+.serviceline3 .servicebox .servicebutton1{
+  padding: 10px 30px;
+  margin: 10px;
+  cursor: pointer;
+  background: linear-gradient(to right, #675f52, #463230);
+  color:black;
+  border:0;
+  outline: none;
+  position: relative;
+  text-align: center;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.serviceline3 .servicebox .servicebutton1:hover{
+ color: white;
+ 
+}
+
+.serviceline3 .servicebox .servicebutton2{
+  padding: 10px 30px;
+  margin: 10px;
+  cursor: pointer;
+  background: linear-gradient(to right, #224758, #89024c);
+  color:black;
+  border:0;
+  outline: none;
+  position: relative;
+  text-align: center;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.serviceline3 .servicebox .servicebutton2:hover{
+ color: white;
+ 
+}
+
+.serviceline3 .servicebox .servicebutton3{
+  padding: 10px 30px;
+  margin: 10px;
+  cursor: pointer;
+  background: linear-gradient(to right, #f200288e, #a4008b);
+  color:black;
+  border:0;
+  outline: none;
+  position: relative;
+  text-align: center;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.serviceline3 .servicebox .servicebutton3:hover{
+ color: white;
+ 
+}
+
+
+
+  /*Button Designing*/
+  
+  .button-box{
+    width: 600px;
+    height: 50px;
+    margin: 20px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px  #ffffff13;
+    border-radius: 30px;
+    text-align: center;
+    
+  }
+  .toggle-btm{
+    padding: 10px 30px;
+    font-size: 18px;
+    width: 190px;
+    height: 50px;
+   color: white;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    position: relative;
+    text-align: center;
+  }
+
+  .toggle-btm:hover{
+    box-shadow: 0 0 20px 10px  #ffffffd3;
+    transition: 0.15s;
+    font-size: 20px;
+  }
+  
+
+  #btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.548);
+    border-radius: 30px;
+    box-shadow: 0 0 20px 10px  #ffffffd3;
+    transition: .5s;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  #btn:hover{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(to right, #09e2e288, #c7047659, #da1a1d62 );
+    border-radius: 30px;
+    box-shadow: 0 0 20px 10px  #ffffffd3;
+    transition: .5s;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+
+  .backbutton {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border-radius: 40px;
+    box-shadow: 0 0 20px 9px  #ffffff13;
+    border: 0;
+    background: rgba(0, 0, 0, 0.342);
+    outline: none;
+    text-align: center;
+    transition: 0.5s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+  }
+  .backbutton:hover {
+    background:black;
+    box-shadow: 0 0 20px 9px  #ffffff71;
+    color: white;
+    
+  }
+  
+  /*TEXT DESIGNING*/
+  .paragraph{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    line-height: 1cm ;
+    letter-spacing: 0.05cm; 
+    text-align: justify;
+  }
+  .paragraph2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1cm ;
+    letter-spacing: 0.05cm; 
+    text-align: center;
+  }
+  
+  
+  /*FADE IN ANIMATION*/
+  div p {
+    text-transform: none;
+    margin:0px;
+    opacity: 0.0;
+    animation: fadeIn ease 1s forwards;
+    -webkit-animation: fadeIn ease 1s forwards;
+    }
+    
+    @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+  
+    .Fadedmainpage{
+      opacity: 5%;
+      position: absolute;
+     float: right;
+     margin-left:525px;
+     margin-top: 120px;
+     
+    }

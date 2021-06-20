@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Efficiency vs Speed Characteristics</title>
+    <link rel="stylesheet" href="EfficiencyvsLoad.css">
+    <meta charset="utf-8" />
+    <script src="https://unpkg.com/chartkick@4.0.4/dist/chartkick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.js"></script>
+    <!-- <script src="https://www.gstatic.com/charts/loader.js"></script> -->
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+
+    <style>
+      .heading{
+        position: relative;
+        letter-spacing: 0.05cm;
+        background: linear-gradient(to left, #030e10, #034c3d, #019ed2, #ec8ff6, #a843c8, #dd3885, #d12701, #e22c09, #c72604, #4b0304 );
+        font-family: 'Times New Roman', Times, serif;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
+      .charts {
+        height: 380px;
+        width: 650px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.616);
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+
+
+
+  <body>
+    <div class="container" style="line-height: 10px; color: rgb(255, 255, 255);">
+      <img src="../images/Efficiencyicon2.png" style="position: absolute;width: 150px;height: 150px;margin-left: 80px;">
+      <a style="text-decoration: none; position: absolute;" href="index.html"><button class="backbutton">Back</button></a>
+      <p style="color: rgb(255, 255, 255); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 40px; text-align: center;">
+        Efficiency v/s Load Characteristics
+      </p>
+      <p style="font-size: 25px; text-align: center; color: rgb(255, 255, 255); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        Results Variable Load Test
+      </p>
+      
+
+      <div id="myform">
+        <div style="font-size:25px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; line-height: 0.5px;">
+        <p style="text-align: center; font-size: 20px;">Enter the data you received from the experiment and compare it with the optimized data</p>
+         Edit obtained efficiency value here:
+          <input type="text" id="y_data" name="y_data" />
+          <button id="editbutton" onclick="editSelected()" style="margin-left: 10px;">Edit</button>
+          <button id="generategraphbutton" onclick="curvefit()" style="width: 200px; height: 30px; margin-left: 10px;">Generate Chart</button>
+          <a style="text-decoration: none; position: absolute;" href="EfficiencyvsLoad.html"><button id="generategraphbutton" style="width: 200px; height: 30px;margin-left: 20px;margin-top: 5px;">Refresh</button></a>
+        </div>
+      </div>
+
+      <div id="mydata">
+        <table id="myTableData">
+          <tr>
+            <!-- <td>&nbsp;</td> -->
+            <td><b>Speed (rpm)</b></td>
+            <td><b>Obtained Efficiency</b></td>
+            <td><b>Actual Efficiency</b></td>
+          </tr>
+        </table>
+        &nbsp;
+        
+      </div>
+
+      
+
+      <div id="chartTitle" style="float: left; position: relative; margin-left:50px; color: rgb(0, 0, 0);"></div>
+
+      <div class="chartContainer">
+        <div id="multiple-line" class="charts" style="float:left;position: relative; margin-left: 50px; color: rgb(0, 0, 0);"></div>
+      </div>
+    </div>
+
+
+
+
+
+    <script>
+      var data_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      var data_y1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      var data_y2 = [0, 52.64, 63.15, 71.65, 78.05, 75.18, 65.45, 61.56, 71.13, 65.34];
+
+      //Table code starts here
+      var rIndex; //index of the current selction
+      var table = document.getElementById("myTableData");
+
+      function createTables() {
+        var table = document.getElementById("myTableData");
+        table.border = "1";
+        var dataHTML = `<tr> <td>Load (kg)</td><td>Obtained Efficiency</td><td>Actual Efficiency</td></tr>`;
+
+        for (var i = 0; i < 10; i++) {
+          dataHTML += `<tr> <td>${data_x[i]}</td><td>${data_y1[i]}</td><td>${data_y2[i]}</td></tr>`;
+        }
+        table.innerHTML = dataHTML;
+        rowSelected();
+      }
+
+      function rowSelected() {
+        for (var i = 0; i < table.rows.length; i++) {
+          table.rows[i].onclick = function () {
+            rIndex = this.rowIndex;
+            if (rIndex != 0)
+              document.getElementById("y_data").value = this.cells[1].innerHTML;
+          };
+        }
+      }
+
+      function editSelected() {
+        var y_data = document.getElementById("y_data").value;
+        data_y1[rIndex - 1] = y_data;
+        // call the create table func to update the changes
+        createTables();
+      }
+      //calling the table creating function
+      createTables();
+      //Table code end Here.
+      function curvefit() {
+        // add title
+        /*var div = (document.getElementById("chartTitle").innerHTML = `<h1> Graph of the given Points </h1>`);*/
+
+        var xAndY1 = {};
+        // Using the foreach method
+        data_x.forEach((x, i) => (xAndY1[x] = data_y1[i]));
+
+        var xAndY2 = {};
+        // Using the foreach method
+        data_x.forEach((x, i) => (xAndY2[x] = data_y2[i]));
+
+        new Chartkick.LineChart("multiple-line", [
+          {
+            name: "Experimental Data",
+            data: xAndY1,
+          },
+          {
+            name: "Optimized Data",
+            data: xAndY2,
+          },
+        ], {colors: ["#a05e41", "#3b4046"]},);
+      }
+    </script>
+  </body>
+</html> 

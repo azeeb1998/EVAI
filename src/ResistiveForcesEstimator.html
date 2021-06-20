@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <style>
+		  .heading{
+        position: relative;
+        background: linear-gradient(to right, rgb(209, 56, 140), #ff0022fb);
+        font-family: 'Times New Roman', Times, serif;
+        -webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		}
+		
+	  </style>
+
+    <title>Resistive Forces Estimator</title>
+    <link rel="stylesheet" href="ResistiveForcesEstimator.css">
+  </head>
+
+
+
+
+  <body style="font-family: Times New Roman;" style="color: rgb(0, 0, 0);">
+	
+		<div class="Mainpage">
+		<div><a style="text-decoration: none;" href="Frontpage.html"><button class="backbutton">Back</button></a></div>
+				
+			<div>
+					<p class="heading" style="font-family: 'Times New Roman', Times, serif; font-size: 40px; letter-spacing: 0.15cm; text-align: center;">
+						Loading Assistor
+					</p>
+				</div>
+				
+				<div class="button-box">
+					<div id="btn"></div>
+						<button style="font-size: 15px; font-family: cambria; text-align: center;" type="button" class="toggle-btm" onclick="I()">Input</button>
+						<button style="font-size: 15px; font-family: cambria; text-align: center;" type="button" class="toggle-btm" onclick="D()">Default</button>
+						<button style="font-size: 15px; font-family: cambria; text-align: center;" type="button" class="toggle-btm" onclick="R()">Results</button>
+				</div>
+
+				<form style="font-size: 20px; letter-spacing: 0.05cm; color: rgb(0, 0, 0);" oninput="
+						Fr.value=parseInt(mass.value)*9.81*parseFloat(fr.value)*Math.cos(parseFloat(a.value)*Math.PI/180)
+						Fw.value=0.5*parseFloat(rho.value)*parseFloat(Cd.value)*parseFloat(Af.value)*Math.pow(parseInt(V.value)+parseInt(Vw.value), 2);
+						Fg.value=parseInt(mass.value)*9.81*Math.sin(parseFloat(a.value)*Math.PI/180);
+						FR.value=parseFloat(Fr.value)+parseFloat(Fw.value)+parseFloat(Fg.value);
+						L.value=parseFloat(FR.value)/19.62;">
+						
+				<div id="I" style="visibility: visible; position:absolute; width: 1000px;">
+							<p style="font-size: 25px; color: #1f0058;text-align:left">Enter the following data</p>
+							<img src="../images/Mechanic.png" alt="Trulli" width="250" height="300" style="float:left;">
+							<p>Enter the Mass of the vehicle: <input class="INPUT" type="number" id="mass"> kg</p>
+							<p>Ground Slope Angle: <input class="INPUT" type="number" id="a" value="0">degrees <span style="font-size: 15px;"><br>(use '-' sign for downward slope)</span></p>
+							<p>Frontal Area of the Vehicle: <input class="INPUT" type="number" id="Af"> m<sup>2</sup></p>
+							<p>Vehicle Speed: <input class="INPUT" type="number" id="V"> m/s</p>
+				</div>
+				<div id="D" style="visibility: hidden; position: absolute; width: 1000px;">
+							<p style="font-size: 25px; color:#1f0058;text-align:left">Default Values (You may freely change them)</p>
+							<img src="../images/Mechanic.png" alt="Trulli" width="250" height="300" style="float:left;">
+							<p>Coefficient of Rolling Resistance: <input class="INPUT" type="number" id="fr" value="0.01"></p>
+							<p>Mass Density of Air: <input class="INPUT" type="number" id="rho" value="1.22"> kg/m<sup>3</sup></p>
+							<p>Aerodynamic Drag Coefficient: <input class="INPUT" type="number" id="Cd" value="0.19"></p>
+							<p>Wind Speed: <input class="INPUT" type="number" id="Vw" value="0"> m/s</p>
+				</div>
+				<div id="R" style="visibility: hidden; position:absolute">
+   						    <p style="font-size: 20px;letter-spacing: 0.02cm; text-align:justify;"><img src="../images/Mechanic.png" alt="Trulli" width="250" height="300" style="float:left;">Based on your inputs above,You have successfully estimated the following results</p>
+							<p style="font-size: 20px;text-align:justify"><span class="heading">Load to be hung on dynamometer L is </span><output style="color:black; font-size: 30px;" name="L" for="FR">(Enter INPUT)</output> kg</p>
+   						    <p style="font-size: 20px;text-align:justify"><span class="heading">The Rolling Resistance F<sub>r</sub> is </span><output style="color:black; font-size: 30px;" name="Fr" for="mass fr a">(Enter INPUT)</output> N</p>
+							<p style="font-size: 20px;text-align:justify"><span class="heading">Aerodynamic Drag F<sub>w</sub> is </span><output style="color:black; font-size: 30px;" name="Fw" for="rho Cd Af V Vw">(Enter INPUT)</output> N</p>
+							<p style="font-size: 20px;text-align:justify"><span class="heading">Grading resistance F<sub>g</sub> is </span><output style="color:black; font-size: 30px;" name="Fg" for="mass a">(Enter INPUT)</output> N</p>
+							<p style="font-size: 20px;text-align:justify"><span class="heading">Total Resistance F<sub>R</sub> is </span><output style="color:black; font-size: 30px;" name="FR" for="Fr Fw Fg">(Enter INPUT)</output> N</p>
+							
+				
+				</div>
+				</form>
+				
+		
+			
+		
+		</div>
+
+	
+	<script>
+ var s = document.getElementById("btn")
+
+ function I(){
+	document.getElementById("I").style.visibility="visible";
+    document.getElementById("D").style.visibility="hidden";
+    document.getElementById("R").style.visibility="hidden";
+    s.style.left = "0px"
+ }
+
+ function D(){
+	document.getElementById("I").style.visibility="hidden";
+    document.getElementById("D").style.visibility="visible";
+    document.getElementById("R").style.visibility="hidden";
+    s.style.left = "200px"
+ }
+
+ function R(){
+	document.getElementById("I").style.visibility="hidden";
+    document.getElementById("D").style.visibility="hidden";
+    document.getElementById("R").style.visibility="visible";
+    s.style.left = "400px"
+ }
+	</script>
+
+
+	</body>
+</html>
